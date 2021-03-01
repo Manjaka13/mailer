@@ -21,12 +21,13 @@ app.get("/", (req, res) => {
 app.post("/", (req, res) => {
 	const {destination, subject, message} = req.body;
 	if(destination && subject && message) {
-		send_mail({
+		const mail = {
 			origin: "manjaka.rajaonson@gmail.com",
 			destination: destination,
 			subject: subject,
 			message: message
-		}).then(() => {
+		};
+		send_mail(mail).then(() => {
 			res.json({
 				response: "Your email has been sent !",
 				status: 1
