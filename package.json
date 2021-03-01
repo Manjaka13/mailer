@@ -1,0 +1,29 @@
+{
+  "name": "mailer",
+  "version": "1.0.0",
+  "description": "Backend service deployed for sending emails from all my apps",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manjaka13/mailer.git"
+  },
+  "keywords": [
+    "Mail"
+  ],
+  "author": "Manjaka13",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manjaka13/mailer/issues"
+  },
+  "homepage": "https://github.com/Manjaka13/mailer#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
