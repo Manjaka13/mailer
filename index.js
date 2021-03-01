@@ -10,6 +10,14 @@ app.use(cors());
 app.use(Express.json());
 
 app.get("/", (req, res) => {
+	res.json({
+		response: "You can send emails at /",
+		structure: "provide these infos in POST request: {destination, subject, message}",
+		status: 1
+	});
+});
+
+app.post("/", (req, res) => {
 	const {destination, subject, message} = req.body;
 	if(destination && subject && message) {
 		send_mail({
